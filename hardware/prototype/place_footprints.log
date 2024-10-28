@@ -1,0 +1,8 @@
+05-13 23:24:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 647:Plugin executed on: 'win32'
+05-13 23:24:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 648:Plugin executed with python version: '3.9.14 (main, Dec 23 2022, 23:36:19) [MSC v.1934 64 bit (AMD64)]'
+05-13 23:24:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 649:KiCad build version: (7.0.0-rc2-216-g525d0da126)
+05-13 23:24:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 650:Plugin version: 2.1.3
+05-13 23:24:44 com_github_MitjaNemec_PlaceFootprints.action_place_footprints 651:Frame repr: <wx._core.Frame object at 0x000001E089784D30>
+05-13 23:24:44 com_github_MitjaNemec_PlaceFootprints.place_footprints 121:getting a list of all footprints on board
+05-13 23:24:44 com_github_MitjaNemec_PlaceFootprints.place_footprints 140:Footprint REF5 does not have Sheetfile property, it will not be considered for placement. Most likely it is only in layout
+05-13 23:24:44 com_github_MitjaNemec_PlaceFootprints.place_footprints 140:Footprint G1 does not have Sheetfile property, it will not be considered for placement. Most likely it is only in layout
