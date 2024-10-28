@@ -23,7 +23,6 @@
 
 #include "hardware/gpio.h"
 #include "hardware/adc.h"
-#include "pico/cyw43_arch.h"
 
 #include "platform.h"
 #include "version.h"
@@ -132,7 +131,6 @@ void platform_update_hwtype(void)
 			gpio_init(26 + PICO_DETECT_ADC_CHANNEL);
 
 			if (adc_result < PICO_DETECT_ADC_THRESHOLD) {
-				cyw43_arch_init();
 				device_type = PLATFORM_DEVICE_TYPE_PICO_W;
 			} else {
 				device_type = PLATFORM_DEVICE_TYPE_PICO;

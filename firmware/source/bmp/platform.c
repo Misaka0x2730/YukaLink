@@ -22,8 +22,8 @@
 #include "general.h"
 
 #include "hardware/gpio.h"
+#include "hardware/timer.h"
 #include "pico/bootrom.h"
-#include "pico/cyw43_arch.h"
 
 #include "FreeRTOS.h"
 #include "task.h"
@@ -54,7 +54,6 @@ void platform_set_idle_state(const bool state)
 			gpio_put(p_pins->act, state);
 		} else if (platform_hwtype() == PLATFORM_DEVICE_TYPE_PICO_W) {
 			if (idle_state != state) {
-				cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, state);
 			}
 		}
 	}
@@ -71,7 +70,6 @@ void platform_toggle_idle_state(void)
 		if (p_pins->act != PIN_NOT_CONNECTED) {
 			gpio_xor_mask(1UL << p_pins->act);
 		} else if (platform_hwtype() == PLATFORM_DEVICE_TYPE_PICO_W) {
-			cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, idle_state);
 		}
 	}
 }

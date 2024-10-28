@@ -40,6 +40,13 @@
  * See http://www.freertos.org/a00110.html
  *----------------------------------------------------------*/
 
+#define configENABLE_FPU         1
+#define configENABLE_MPU         0
+#define configENABLE_TRUSTZONE   0
+#define configRUN_FREERTOS_SECURE_ONLY 1
+
+#define configMAX_SYSCALL_INTERRUPT_PRIORITY ( 1 << 4 )
+
 /* Scheduler Related */
 #define configUSE_PREEMPTION     1
 #define configUSE_TICKLESS_IDLE  0
@@ -48,7 +55,7 @@
 #define configTICK_RATE_HZ       ((TickType_t)1000)
 #define configMAX_PRIORITIES     5
 #define configMINIMAL_STACK_SIZE ((configSTACK_DEPTH_TYPE)128)
-#define configCPU_CLOCK_HZ       (250000000UL)
+#define configCPU_CLOCK_HZ       (150000000UL)
 #define configUSE_16_BIT_TICKS   0
 
 #define configIDLE_SHOULD_YIELD 0
